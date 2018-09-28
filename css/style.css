@@ -1,0 +1,72 @@
+body {
+    background-color: lightgray;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+#main {
+    border: 1px black solid;
+    padding: 40px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: rem;
+    font-family: 'Coda Caption', sans-serif;
+
+}
+form {
+    font-size: 1.5rem;
+}
+select {
+    font-size: 1rem;
+}
+#btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;    
+    text-align: center;
+    height: 40px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: red;
+    font-size: 1.5rem;
+    background-color: greenyellow;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#resume {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+#hint {
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+#reponse {
+    border: 1px solid black;
+    padding: 50px;
+}
+.horo {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),
+                                rgba(0, 0, 0, 0.6)),
+                                url("../img/horos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 2.3rem;
+}
+.meteo {
+    background: linear-gradient(rgba(0, 0, 0, 0.2),
+                                rgba(0, 0, 0, 0.7)),
+                                url("../img/meteo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-family: 'Kosugi', sans-serif;
+    font-size: 2rem;
+
+}
