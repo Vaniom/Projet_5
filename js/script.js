@@ -46,7 +46,7 @@ btnElt.addEventListener("click", function(e){// ajout d'un ecouteur d'evenement 
                 })
             //console.log("phrase = " + phrase);
             phrasesArray.push(phrase);// on stocke chaque phrase dans un tableau
-            respArray.splice(0, respArray.length);// et on purge du tableau des éléments aleatoires            
+            respArray.splice(0, respArray.length);// et on purge le tableau des éléments aleatoires            
         }        
         for (var i = 0; i < phrasesArray.length; i++){// pour chaque element du tableau des phrases
             var phraseDiv = document.createElement("p");// on créé un nouveau paragraphe
