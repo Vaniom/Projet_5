@@ -24,14 +24,14 @@ var horoscopArray = [part0, part1, part2, part3];// on regroupe les sequences 'h
 var meteoArray = [part4, part5, part6];// idem pour les sequences 'meteo'
 reponseDiv.style.display = "none";// On masque la div vide
 
-btnElt.addEventListener("click", function(){// ajout d'un ecouteur d'evenement sur le bouton
+btnElt.addEventListener("click", function(e){// ajout d'un ecouteur d'evenement sur le bouton
     nombreLigne = document.getElementById('nombre').value;// choix utilisateur du nombre de lignes à générer stocké dans la variable nombreLigne
     reponseDiv.innerHTML = ""; // on efface le contenu des div
     hintDiv.innerHTML = "";
     resumeDiv.innerHTML = "";
     child.textContent = "Vous avez choisi de générer " + nombreLigne +" phrase(s) dans le mode " + generateurType.value;
     resumeDiv.appendChild(child);
-    //event.preventDefault();// On interdit le raffraichissement de la page lors du clic sur le bouton
+    e.preventDefault();// On interdit le raffraichissement de la page lors du clic sur le bouton
     
     //fonction de génération aléatoire de phrase
     function randomPhrase(array) {        
