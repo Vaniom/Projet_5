@@ -5,16 +5,24 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <form>
-        <label for="nombre">Nombre de phrases à afficher: </label>
-        <select name="nombre" id="nombre">        
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>       
-        <br />      
+        <form>            
+        <p>
+            Sélectionnez votre générateur de prévision
+            <select name="typeGen" id="typeGen">
+                <option value="horoscope">Horoscope</option>
+                <option value="meteo">Météo</option>
+            </select>
+        </p>
+        <p>
+            <label for="nombre">Nombre de phrases à afficher: </label>
+            <select name="nombre" id="nombre">        
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </p>     
         <input type="button" id="btn" name="btn" value="Générer" />        
         </form>
         <div id="reponse">            
