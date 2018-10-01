@@ -31,7 +31,7 @@ btnElt.addEventListener("click", function(){// ajout d'un ecouteur d'evenement s
     resumeDiv.innerHTML = "";
     child.textContent = "Vous avez choisi de générer " + nombreLigne +" phrase(s) dans le mode " + generateurType.value;
     resumeDiv.appendChild(child);
-    event.preventDefault();// On interdit le raffraichissement de la page lors du clic sur le bouton
+    //event.preventDefault();// On interdit le raffraichissement de la page lors du clic sur le bouton
     
     //fonction de génération aléatoire de phrase
     function randomPhrase(array) {        
