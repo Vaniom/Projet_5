@@ -36,39 +36,39 @@ btnElt.addEventListener("click", function(e){// ajout d'un ecouteur d'evenement 
     //fonction de génération aléatoire de phrase
     function randomPhrase(array) {        
         for (var i = 0; i < nombreLigne; i++) { // on répète la boucle x fois pour générer x phrases
-            //console.log(nombreLigne);
+            console.log(nombreLigne);// contrôle
             phrase = ""; // on purge la valeur de la variable phrase
             array.forEach(function(elt){ // Pour chaque élément du tableau
                 var resp = elt[Math.floor(Math.random() * elt.length)];// tirage aleatoire d'un element dans chaque sous-tableau          
-                //console.log(resp);
+                console.log(resp);// contrôle
                 respArray.push(resp);// On stocke chaque valeur tirée pécédemment dans un nouveau tableau
-                phrase = "".concat(...respArray);// et on concatene les éléments du tableau respArray pour former une phrase
+                phrase = "".concat(...respArray);// et on concatene les éléments du tableau respArray pour former une phrase => syntaxe ES6
                 })
-            //console.log("phrase = " + phrase);
+            console.log("phrase = " + phrase);//contrôle
             phrasesArray.push(phrase);// on stocke chaque phrase dans un tableau
             respArray.splice(0, respArray.length);// et on purge le tableau des éléments aleatoires            
         }        
-        for (var i = 0; i < phrasesArray.length; i++){// pour chaque element du tableau des phrases
+        for (var i = 0; i < phrasesArray.length; i++){// pour chaque element du tableau phrasesArray
             var phraseDiv = document.createElement("p");// on créé un nouveau paragraphe
             phraseDiv.textContent = phrasesArray[i];// on definit la valeur textuelle du 'p' créé
-            //console.log("phrasesArray = " + phrasesArray[i]);
+            console.log("phrasesArray = " + phrasesArray[i]);// Contrôle
             reponseDiv.appendChild(phraseDiv);// On ajoute le paragraphe à la div
             //console.log("child = " + child.textContent);
             reponseDiv.style.display = "block";
         }
           
-        phrasesArray.splice(0, phrasesArray.length);// Purge du tableau de phrases            
-            var hintPhrase = document.createElement("p");
+        phrasesArray.splice(0, phrasesArray.length);// Purge du tableau phrasesArray            
+            var hintPhrase = document.createElement("p");// création d'un nouvel élément p
             hintPhrase.textContent = "Vous pouvez générer de nouvelles phrases en cliquant sur le bouton Go! à nouveau";
-            hintDiv.appendChild(hintPhrase);
+            hintDiv.appendChild(hintPhrase);// ajout dans la div
 
     }
     //gestion du choix du générateur
     if (generateurType.value == "horoscope"){// Si la valeur choisie par l'utilisateur est horoscope
         randomPhrase(horoscopArray); // on applique la fonction au tableau horoscopArray
-        reponseDiv.className = "horo";
+        reponseDiv.className = "horo";// et on attribue la classe correspondante pour css
     } else { //sinon
         randomPhrase(meteoArray);// on applique la fonction au tableau meteoArray
-        reponseDiv.className = "meteo";
+        reponseDiv.className = "meteo";// et on attribue la classe adequate.
     }        
 })
